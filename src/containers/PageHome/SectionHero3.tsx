@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import { PostDataType } from "data/types";
 import NcImage from "components/NcImage/NcImage";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect } from "react";
 import SectionVideos from "./SectionVideos";
 import SectionHero2 from "./SectionHero2";

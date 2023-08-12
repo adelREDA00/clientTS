@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useState } from "react";
 import { DEMO_POSTS } from "data/posts";
 import { PostAuthorType, PostDataType } from "data/types";

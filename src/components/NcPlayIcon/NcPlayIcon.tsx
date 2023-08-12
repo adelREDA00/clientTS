@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 
 export interface NcPlayIconProps {

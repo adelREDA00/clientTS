@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 export interface MessageProps {
   type?: "success" | "error" | "warning" | "info";

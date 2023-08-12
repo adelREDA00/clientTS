@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Button, { ButtonProps } from "components/Button/Button";

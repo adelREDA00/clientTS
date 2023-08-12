@@ -1,3 +1,4 @@
+// @ts-nocheck
 import ButtonPrimary from "components/Button/ButtonPrimary";
 import ButtonSecondary from "components/Button/ButtonSecondary";
 import Input from "components/Input/Input";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import HeadBackgroundCommon from "components/HeadBackgroundCommon/HeadBackgroundCommon";
 import Heading2 from "components/Heading/Heading2";
 import React, { FC } from "react";

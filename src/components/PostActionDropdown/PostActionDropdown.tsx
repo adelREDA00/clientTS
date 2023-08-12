@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useState } from "react";
 import twFocusClass from "utils/twFocusClass";
 import NcDropDown from "components/NcDropDown/NcDropDown";

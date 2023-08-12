@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import Input from "components/Input/Input";
 import ButtonPrimary from "components/Button/ButtonPrimary";

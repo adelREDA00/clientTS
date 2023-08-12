@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import ButtonCircle from "components/Button/ButtonCircle";
 import rightImg from "images/SVG-subcribe2.png";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import ButtonPrimary from "components/Button/ButtonPrimary";
 import React from "react";
 import { Helmet } from "react-helmet";

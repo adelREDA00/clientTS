@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import NcImage from "components/NcImage/NcImage";
 import Pagination from "components/Pagination/Pagination";

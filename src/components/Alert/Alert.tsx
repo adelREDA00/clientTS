@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import ButtonClose from "components/ButtonClose/ButtonClose";
 

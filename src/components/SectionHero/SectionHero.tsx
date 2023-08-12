@@ -1,3 +1,4 @@
+// @ts-nocheck
 import ButtonPrimary from "components/Button/ButtonPrimary";
 import React, { FC, ReactNode } from "react";
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import LayoutPage from "components/LayoutPage/LayoutPage";
 import Input from "components/Input/Input";

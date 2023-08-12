@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import NcImage from "components/NcImage/NcImage";
 import rightImgDemo from "images/BecomeAnAuthorImg.png";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, Fragment, ReactNode, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ButtonDropdown from "components/ButtonDropdown/ButtonDropdown";

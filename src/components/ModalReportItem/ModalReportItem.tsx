@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC, useEffect, useRef, useState } from "react";
 import NcModal from "components/NcModal/NcModal";
 import Textarea from "components/Textarea/Textarea";

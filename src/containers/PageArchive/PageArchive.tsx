@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC } from "react";
 import ModalCategories from "./ModalCategories";
 import ModalTags from "./ModalTags";

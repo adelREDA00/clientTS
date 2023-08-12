@@ -136,7 +136,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
     
-      const API = 'Na8C7bNT5OTCTIr8TuIf18nmuG5MbfpTjI4XypUURFdacTdr02TOT20DOAVn' 
+      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX' 
   
       try {
         const response = await axios.get(`/api/football/teams?api_token=${API} `);

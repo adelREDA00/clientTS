@@ -37,6 +37,8 @@ import PageArchiveVideo from "containers/PageArchive/PageArchiveVideo";
 import PageArchiveAudio from "containers/PageArchive/PageArchiveAudio";
 import PageHomeDemo5 from "containers/PageHome/PageHomeDemo5";
 import PageHomeDemo6 from "containers/PageHome/PageHomeDemo6";
+import Page6 from "containers/PageHome/Page6";
+
 import MediaRunningContainerForSafari from "containers/MediaRunningContainer/MediaRunningContainerForSafari";
 import isSafariBrowser from "utils/isSafariBrowser";
 import PageHomeDemo7 from "containers/PageHome/PageHomeDemo7";
@@ -110,6 +112,7 @@ export const pages: Page[] = [
   { path: "/home-demo-4", component: PageHomeDemo4 },
   { path: "/home-demo-5", component: PageHomeDemo5 },
   { path: "/home-demo-6/:type/:id/:name", component: PageHomeDemo6 },
+  { path: "/page6/:id", component: Page6 },
   { path: "/home-demo-7", component: PageHomeDemo7 },
   //
 ];

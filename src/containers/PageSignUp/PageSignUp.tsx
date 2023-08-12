@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useHistory } from 'react-router-dom';
 import TransitionAlerts from "../../components/TransitionAlerts"
+import { log } from "console";
 
 
 export interface PageSignUpProps {
@@ -50,6 +51,8 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
   } 
   //handling error
   const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('Une erreur s est produite. Vérifiez que vous n utilisez pas déjà une adresse e-mail ou un nom d utilisateur utilisé auparavant.');
+
   const [success, setSuccess] = useState(false);
   //user
   const [username, setUsername] = useState('');
@@ -120,10 +123,14 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
       setError(false)
       setSuccess(true)
       setOpenE(!openE)
-
+      
     } catch (err) {
       setError(true)
+      setErrorMsg(err.request.response)
     }
+
+    
+    
   };
   return (
     <div className={`nc-PageSignUp ${className}`} data-nc-id="PageSignUp">
@@ -205,6 +212,13 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
             </label>
             <ButtonPrimary onClick={handleClick} type="submit">Register</ButtonPrimary>
           </form>
+
+          
+      {error && errorMsg && (
+        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+          <span style={{ color: 'red' }}> {errorMsg} </span>
+        </div>
+      )}
 
           {/* ==== */}
           <span className="block text-center text-neutral-700 dark:text-neutral-300">

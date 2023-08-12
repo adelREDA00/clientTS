@@ -52,6 +52,7 @@ const SectionMagazine4: FC<SectionMagazine4Props> = ({
         catname={heading}
         tabActive={tabActive}
         tabs={tabs}
+        id={data}
         onClickTab={handleClickTab}
       />
 

@@ -23,6 +23,7 @@ function PickFav() {
   const [country, setCountry] = useState([]);
   const { token, user } = useContext(AuthContext);
   const history = useHistory();
+  const [title, setTitle] = useState(" 🌍 Pays préférés");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -100,6 +101,7 @@ function PickFav() {
   const handleCardClickCountry = (data) => {
     setFavoriteCountry(data._id);
     setStep(1);
+    setTitle('🏆 Ligue préférée')
 
   };
 
@@ -110,6 +112,8 @@ function PickFav() {
 
     setFavoriteLeague(data._id);
     setStep(2);
+    setTitle('⚽ Clubs préférés')
+
   };
 
 
@@ -132,8 +136,15 @@ function PickFav() {
   return (
 
 <div className="card_container">
-<div className="drop">
 
+<div className="drop">
+ 
+
+  <div className="drop__title-container">
+  <span>
+    {title}
+  </span>
+  </div>
 {step === 0 && (
     
 <div className="drop__container" id="drop-items">

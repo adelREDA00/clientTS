@@ -68,6 +68,7 @@ const SectionMagazine1: FC<SectionMagazine1Props> = ({
         tabs={tabs}
         heading={`${catname} Articles`}
         catname={catname}
+        id={data}
         onClickTab={handleClickTab}
       />
       {!data.length && <span>Nothing we found!</span>}

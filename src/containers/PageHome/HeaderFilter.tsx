@@ -5,6 +5,7 @@ import Nav from "components/Nav/Nav";
 import NavItem from "components/NavItem/NavItem";
 import ButtonSecondary from "components/Button/ButtonSecondary";
 import { useFetch } from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
 
 export interface HeaderFilterProps {
   tabActive: string;
@@ -17,10 +18,14 @@ const HeaderFilter: FC<HeaderFilterProps> = ({
   tabActive,
   onClickTab,
   catname,
+  id
 }) => {
 
 
-
+const handleAll = ()=>{
+  console.log("adel");
+  
+}
   
   return (
     <div className="flex flex-col mb-8 relative">
@@ -40,10 +45,13 @@ const HeaderFilter: FC<HeaderFilterProps> = ({
       </NavItem>
         </Nav>
         <span className="hidden sm:block flex-shrink-0">
-          <ButtonSecondary className="!leading-none">
+        <Link  to={`/page6/${id}/${encodeURIComponent(catname)}`}  >
+        <ButtonSecondary onClick={handleAll} className="!leading-none">
             <span>View all</span>
             <i className="ml-3 las la-arrow-right text-xl"></i>
           </ButtonSecondary>
+            </Link>
+         
         </span>
       </div>
     </div>

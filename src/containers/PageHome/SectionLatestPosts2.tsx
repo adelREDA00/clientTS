@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC } from "react";
 import Card3 from "components/Card3/Card3";
 import Heading from "components/Heading/Heading";

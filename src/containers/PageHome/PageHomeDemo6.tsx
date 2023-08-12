@@ -90,11 +90,12 @@ const PageHomeDemo6: React.FC = () => {
   const [fixtures, setFixtures] = useState();
 
 
+console.log(data1);
 
   useEffect(() => {
     const fetchData = async () => {
 
-      const API = 'Na8C7bNT5OTCTIr8TuIf18nmuG5MbfpTjI4XypUURFdacTdr02TOT20DOAVn'
+      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX'
 
       try {
         const response = await axios.get(`/api/football/standings?api_token=${API}&include=participant`);
@@ -119,7 +120,7 @@ const PageHomeDemo6: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
 
-      const API = 'Na8C7bNT5OTCTIr8TuIf18nmuG5MbfpTjI4XypUURFdacTdr02TOT20DOAVn'
+      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX'
 
       try {
         const response = await axios.get(`/api/football/livescores/inplay?api_token=${API}&include=lineups`);
@@ -142,7 +143,7 @@ const PageHomeDemo6: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const API = 'Na8C7bNT5OTCTIr8TuIf18nmuG5MbfpTjI4XypUURFdacTdr02TOT20DOAVn';
+      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX';
 
       try {
         const seasonResponse = await axios.get(`/api/football/leagues/${Typedata.id}?api_token=${API}&include=currentseason`);
@@ -186,7 +187,7 @@ const PageHomeDemo6: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const API = 'Na8C7bNT5OTCTIr8TuIf18nmuG5MbfpTjI4XypUURFdacTdr02TOT20DOAVn';
+      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX';
 
       try {
         const response = await axios.get(
@@ -298,26 +299,25 @@ const PageHomeDemo6: React.FC = () => {
         {step === 0 && (
           <div className="container relative">
 
-            <SectionMagazine10 tabs={[]} data1={data1} heading="" />
-            {/* === SECTION 9 === 
-      <SectionMagazine9
-        gapClassName="gap-6"
-        className="pt-16 lg:pt-24"
-        posts={DEMO_POSTS_NEWS.filter((_, i) => i >= 6 && i < 18)}
-      />*/}
+           {/* === SECTION 9 ===  
+           
+    
             {/* ===  
+            
      <SectionAds imgAds={imgAds} className="pt-16 lg:pt-24" /> === 
      */}
 
-
-            {/* === SECTION 4 === */}
+{data1.length >= 5 ? (
+  <SectionMagazine10 tabs={[]} data1={data1} heading="" />
+) : null}
+            {/* === SECTION 4 
             <SectionMagazine2
               className="pt-16 lg:pt-24"
               heading="Articles récents"
               posts={MAGAZINE2_POSTS}
               tabs={MAGAZINE1_TABS}
               data1={data1}
-            />
+            />=== */}
             {/* === SECTION 11 === */}
             <SectionMagazine11 data1={data1} className="py-16 lg:py-24" />
           </div>

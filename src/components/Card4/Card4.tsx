@@ -10,7 +10,7 @@ import CategoryBadgeList from "components/CategoryBadgeList/CategoryBadgeList";
 export interface Card4Props {
   className?: string;
   post: PostDataType;
-  
+  index
 }
 
 const Card4: FC<Card4Props> = ({ className = "h-full", post,index }) => {

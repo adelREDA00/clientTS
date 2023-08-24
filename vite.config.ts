@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-           target: 'https://api-blog-m95eysvxm-adelreda00.vercel.app',
+           target: 'https://client-ts-adelreda00.vercel.app',
            changeOrigin: true,
            secure: false,      
            ws: true,

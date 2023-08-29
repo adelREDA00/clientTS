@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-           target: 'https://api-blog-ten.vercel.app',
+           target: 'https://blogapi-vbdw.onrender.com',
            changeOrigin: true,
            secure: false,      
            ws: true,

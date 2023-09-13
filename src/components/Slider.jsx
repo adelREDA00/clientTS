@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 function Slider({ids}) {
-  const [players, setPlayers] = useState(null);
+  const [players, setPlayers] = useState([]);
   const [current, setCurrent] = useState(0);
   const [team, setTeam] = useState(0);
 

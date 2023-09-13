@@ -131,9 +131,8 @@ const PageHome: React.FC = () => {
     fetchData();
   }, []);
 
-  const [standings, setStandings] = useState([]);
 
-  useEffect(() => {
+ /* useEffect(() => {
     const fetchData = async () => {
     
       const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX' 
@@ -148,8 +147,9 @@ const PageHome: React.FC = () => {
   
     fetchData();
   }, []);
+  const [standings, setStandings] = useState([]);
 
-
+*/
 
 
 

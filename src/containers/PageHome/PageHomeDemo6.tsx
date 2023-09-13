@@ -87,7 +87,7 @@ const PageHomeDemo6: React.FC = () => {
   const { data1, loading1, error1, reFetch } = useFetch(`/api/posts/?${kind}=${id}`)
 
 
-  const [fixtures, setFixtures] = useState();
+  const [fixtures, setFixtures] = useState([]);
 
 
 console.log(data1);
@@ -115,7 +115,7 @@ console.log(data1);
   }, [Typedata]);
 
 
-  const [matches, setMatches] = useState();
+  const [matches, setMatches] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {

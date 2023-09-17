@@ -106,7 +106,7 @@ const PageHome: React.FC = () => {
   }, []);
 
 
-  const { user, token } = useContext(AuthContext);
+  /*const { user, token } = useContext(AuthContext);
   const [userinfo, setUserinfo] = useState({})
 
   useEffect(() => {
@@ -131,7 +131,7 @@ const PageHome: React.FC = () => {
     fetchData();
   }, []);
 
-
+*/
  /* useEffect(() => {
     const fetchData = async () => {
     
@@ -280,13 +280,18 @@ const PageHome: React.FC = () => {
             type={1}
           />
 
-
-          <SectionMagazine9
+          {/* === 
+        recomndation 5 
+          
+             <SectionMagazine9
             gapClassName="gap-6"
             className="pt-16 lg:pt-24"
             posts={data.filter((_, i) => i >= 6 && i < 18)}
             userData={userinfo}
           />
+          === */}
+
+       
 
           <br/>
       

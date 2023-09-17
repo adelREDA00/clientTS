@@ -31,6 +31,7 @@ function Slider({ids}) {
     setCurrent(swiper.realIndex);
   };
 
+  console.log("lol",players);
 
   return (
     <div className="sliderMain">

@@ -46,20 +46,24 @@ export default function AvatarDropdown() {
               <Popover.Panel className="absolute z-10 w-screen max-w-[260px] px-4 mt-3 -right-10 sm:right-0 sm:px-0">
                 <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid grid-cols-1 gap-6 bg-white dark:bg-neutral-800 py-7 px-6">
-                    <div className="flex items-center space-x-3">
-                      <Avatar
-                        imgUrl={"/assets/def1.jpg"}
-                        sizeClass="w-12 h-12"
-                        radius="rounded-full"
-                      />
 
-                      <div className="flex-grow">
-                        <h4 className="font-semibold">{user.username}</h4>
-                        <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                        {user.email}
-                        </p>
+                  {user && ( // Check if user exists
+                      <div className="flex items-center space-x-3">
+                        <Avatar
+                          imgUrl={"/assets/def1.jpg"}
+                          sizeClass="w-12 h-12"
+                          radius="rounded-full"
+                        />
+                        <div className="flex-grow">
+                          <h4 className="font-semibold">{user.username}</h4>
+                          <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                            {user.email}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
+
+              
 
                     <div className="w-full border-b border-neutral-200 dark:border-neutral-700" />
 

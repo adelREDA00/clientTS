@@ -200,50 +200,54 @@ useEffect(() => {
 
 
 
-          {catdata.map((category, index) => {
-            const componentIndex = index % 3;
-            if (componentIndex === 0) {
-              return (
-                <SectionMagazine1
-                  key={category._id}
-                  className="py-16 lg:py-28"
-                  posts={MAGAZINE1_POSTS}
-                  tabs={MAGAZINE1_TABS}
-                  data={category._id}
-                  catname={category.name}
-                />
-              );
-            } else if (componentIndex === 1) {
-              return (
-                <div className="relative py-16" key={category._id}>
-                  <BackgroundSection />
-                  <SectionSliderPosts
-                    postCardName="card11"
-                    data={category._id}
-                    heading={`${category.name} Articles`}
-                    subHeading="Discover the most outstanding articles in all topics of life."
-                    posts={DEMO_POSTS.filter(
-                      (p, i) => i > 3 && i < 25 && p.postType === "standard"
-                    )}
-                    sliderStype="style2"
-                    uniqueSliderClass="pageHome-section12"
-                  />
-                </div>
-              );
-            } else {
-              return (
-                <SectionMagazine4
-                  key={category._id}
-                  data={category._id}
-                  className="py-16 lg:py-28"
-                  heading={category.name}
-                  posts={MAGAZINE2_POSTS}
-                  tabs={MAGAZINE1_TABS}
-                />
+{catdata.length > 0 ? (
+  catdata.map((category, index) => {
+    const componentIndex = index % 3;
+    if (componentIndex === 0) {
+      return (
+        <SectionMagazine1
+          key={category._id}
+          className="py-16 lg:py-28"
+          posts={MAGAZINE1_POSTS}
+          tabs={MAGAZINE1_TABS}
+          data={category._id}
+          catname={category.name}
+        />
+      );
+    } else if (componentIndex === 1) {
+      return (
+        <div className="relative py-16" key={category._id}>
+          <BackgroundSection />
+          <SectionSliderPosts
+            postCardName="card11"
+            data={category._id}
+            heading={`${category.name} Articles`}
+            subHeading="Discover the most outstanding articles in all topics of life."
+            posts={DEMO_POSTS.filter(
+              (p, i) => i > 3 && i < 25 && p.postType === "standard"
+            )}
+            sliderStype="style2"
+            uniqueSliderClass="pageHome-section12"
+          />
+        </div>
+      );
+    } else {
+      return (
+        <SectionMagazine4
+          key={category._id}
+          data={category._id}
+          className="py-16 lg:py-28"
+          heading={category.name}
+          posts={MAGAZINE2_POSTS}
+          tabs={MAGAZINE1_TABS}
+        />
+      );
+    }
+  })
+) : (
+  <p>Loading...</p>
+)}
 
-              )
-            }
-          })}
 
 
 
@@ -276,7 +280,8 @@ useEffect(() => {
             categoryCardType="card4"
             countheading="COMPÉTITIONS"
             uniqueSliderClass="pageHome-section5"
-            elementdata={leaguedata}
+            elementdata={leaguedata || []}
+
             type={0}
           />
 
@@ -290,7 +295,7 @@ useEffect(() => {
             categories={DEMO_CATEGORIES.filter((_, i) => i < 10)}
             categoryCardType="card4"
             uniqueSliderClass="pageHome-section5"
-            elementdata={clubdata}
+            elementdata={clubdata || []}
             type={1}
           />
 

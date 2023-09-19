@@ -51,59 +51,73 @@ const PageHome: React.FC = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get("https://api-blog-ten.vercel.app/api/posts");
-        setData(res.data);
+        
+        // Verify that res.data is an array before setting state
+        const postsData = Array.isArray(res.data) ? res.data : [];
+  
+        setData(postsData);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
   }, []);
+  
 
 
   const [catdata, setCatData] = useState([]);
-  //fetching the posts
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
-        setCatData(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+//fetching categories
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
+      
+      // Verify that res.data is an array before setting state
+      const categoriesData = Array.isArray(res.data) ? res.data : [];
 
+      setCatData(categoriesData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  fetchData();
+}, []);
 
+const [leaguedata, setLeagueData] = useState([]);
+//fetching the league
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
+      
+      // Verify that res.data is an array before setting state
+      const leagueData = Array.isArray(res.data) ? res.data : [];
 
-  const [leaguedata, setLeagueData] = useState([]);
-  const [clubdata, setClubData] = useState([]);
-  //fetching the club
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
-        setClubData(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+      setLeagueData(leagueData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  fetchData();
+}, []);
 
+const [clubdata, setClubData] = useState([]);
+//fetching the club
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
+      
+      // Verify that res.data is an array before setting state
+      const clubData = Array.isArray(res.data) ? res.data : [];
 
-  //fetching league
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
-        setLeagueData(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+      setClubData(clubData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  fetchData();
+}, []);
 
 
   /*const { user, token } = useContext(AuthContext);

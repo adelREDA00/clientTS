@@ -50,7 +50,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/posts");
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/posts");
         setData(res.data);
       } catch (err) {
         console.log(err);
@@ -65,7 +65,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/categories");
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
         setCatData(res.data);
       } catch (err) {
         console.log(err);
@@ -82,7 +82,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/club");
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
         setClubData(res.data);
       } catch (err) {
         console.log(err);
@@ -96,7 +96,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/league");
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
         setLeagueData(res.data);
       } catch (err) {
         console.log(err);

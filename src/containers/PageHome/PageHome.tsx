@@ -167,7 +167,7 @@ useEffect(() => {
 
 
 
-  const reversedData = data.slice().reverse();
+  //const reversedData = data.slice().reverse();
 
   
 
@@ -185,12 +185,15 @@ useEffect(() => {
 
         {/* ======= START CONTAINER ============= */}
         <div className="container relative">
-          {/* === SECTION  === */}
-          <SectionLargeSlider
+          {/* === SECTION
+          
+              <SectionLargeSlider
             className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-24 "
             posts={POSTS.filter((_, i) => i < 3)}
             data={reversedData}
           />
+            === */}
+      
 
 
           {/* === SECTION 4 ===

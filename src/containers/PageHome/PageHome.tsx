@@ -273,9 +273,9 @@ useEffect(() => {
           */}
 
 
-          {/* === SECTION 5 === */}
-
-          <SectionSliderNewCategories
+          {/* === TEMP DELETE FIXXXX THIS  
+          
+               <SectionSliderNewCategories
             className="py-16 lg:py-28"
             heading="COMPÉTITIONS POPULAIRES 🏆"
             categories={DEMO_CATEGORIES.filter((_, i) => i < 10)}
@@ -300,6 +300,9 @@ useEffect(() => {
             elementdata={clubdata || []}
             type={1}
           />
+          === */}
+
+     
 
           {/* === 
         recomndation 5 

@@ -22,7 +22,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
   onClickClose,
 }) => {
 
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
 
   const [leaguedata, setLeagueData] = useState([]);
@@ -31,8 +31,9 @@ const NavMobile: React.FC<NavMobileProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/club");
-        setClubData(res.data);
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
+        const leagueData = Array.isArray(res.data) ? res.data : [];
+        setClubData(leagueData);
       } catch (err) {
         console.log(err);
       }
@@ -45,8 +46,9 @@ const NavMobile: React.FC<NavMobileProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/league");
-        setLeagueData(res.data);
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
+        const leagueData = Array.isArray(res.data) ? res.data : [];
+        setLeagueData(leagueData);
       } catch (err) {
         console.log(err);
       }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const SingleHeader = ({ name, Typedata, handleDisplay, trackTitle, type }) => {
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
   const [image, setImage] = useState(null);
   const [elemtype, setElemtype] = useState("");
   const [headData, setHeadData] = useState([]);

@@ -127,7 +127,7 @@ const CommentCard: FC<CommentCardProps> = ({
     
     try {
 
-      const res = await axios.delete("https://api-blog-ten.vercel.app/api/comments", {
+      const res = await axios.delete("https://apiblognode.onrender.com/api/comments", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

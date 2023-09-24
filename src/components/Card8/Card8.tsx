@@ -16,7 +16,7 @@ const Card8: FC<Card8Props> = ({ className = "h-full", postsingle }) => {
   const { title,photo, desc,_id, categories } = postsingle;
 
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
 
   

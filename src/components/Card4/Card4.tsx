@@ -19,7 +19,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post,index }) => {
 
 
 
-    const PF = "https://api-blog-ten.vercel.app/images/";
+    const PF = "https://apiblognode.onrender.com/images/";
 
     
 

@@ -28,7 +28,7 @@ const Card18: FC<Card18Props> = ({
 }) => {
   const { photo, title, createdAt,categories, desc, user, updatedAt,comments,likes, _id} = post;
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
 
   const renderMeta = () => {

@@ -32,7 +32,7 @@ export default function FullScreenDialog({ ApiData,data1,open,handleSubmitClub,h
   };
 
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
 
 

@@ -63,9 +63,9 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
 
   
 
-  useFetchData('https://api-blog-ten.vercel.app/api/club/', setClubs);
-  useFetchData('https://api-blog-ten.vercel.app/api/league/', setLeague);
-  useFetchData('https://api-blog-ten.vercel.app/api/country/', setCountry);
+  useFetchData('https://apiblognode.onrender.com/api/club/', setClubs);
+  useFetchData('https://apiblognode.onrender.com/api/league/', setLeague);
+  useFetchData('https://apiblognode.onrender.com/api/country/', setCountry);
 
 
   const handleLeagueSelect = (id) => {
@@ -121,7 +121,7 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
       };
 
   
-      await axios.put(`https://api-blog-ten.vercel.app/api/users/${user._id}`, postData, config);
+      await axios.put(`https://apiblognode.onrender.com/api/users/${user._id}`, postData, config);
       // Handle success or any additional logic
       console.log('user updated successfully!');
     } catch (error) {
@@ -146,7 +146,7 @@ const SectionGridAuthorBox: FC<SectionGridAuthorBoxProps> = ({
         },
       };
   
-     const res =  await axios.get(`https://api-blog-ten.vercel.app/api/users/${user._id}`, config);
+     const res =  await axios.get(`https://apiblognode.onrender.com/api/users/${user._id}`, config);
       // Handle success or any additional logic
     } catch (error) {
       // Handle error

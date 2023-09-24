@@ -34,7 +34,7 @@ const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = "https://api-blog-ten.vercel.app/api/posts";
+      let url = "https://apiblognode.onrender.com/api/posts";
       let queryParams = [];
 
       if (categories && categories.length > 0) {

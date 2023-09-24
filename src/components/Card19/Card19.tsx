@@ -26,7 +26,7 @@ const Card19: FC<Card19Props> = ({
   hoverClass = "",
   showCategories = true,
 }) => {
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
   
   
 

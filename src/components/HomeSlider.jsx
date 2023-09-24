@@ -15,13 +15,13 @@ function HomeSlider({ids}) {
 
  
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://api-blog-ten.vercel.app/api/player`);
+        const response = await axios.get(`https://apiblognode.onrender.com/api/player`);
         const postsData = Array.isArray(response.data) ? response.data : [];
 
         setPlayers(postsData);

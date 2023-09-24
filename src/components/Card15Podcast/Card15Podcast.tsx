@@ -18,7 +18,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
   const { title, desc,user,createdAt, _id,postType,photo, date } = post;
   const IS_AUDIO = postType === "audio";
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
 
   const renderIcon = (state?: "loading" | "playing") => {

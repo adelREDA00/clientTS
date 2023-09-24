@@ -111,7 +111,7 @@ const SectionSliderPosts: FC<SectionSliderPostsProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?cat=${data}`);
+        const res = await axios.get(`https://apiblognode.onrender.com/api/posts/?cat=${data}`);
         const postsData = Array.isArray(res.data) ? res.data : [];
         setPostData(postsData);
       } catch (err) {

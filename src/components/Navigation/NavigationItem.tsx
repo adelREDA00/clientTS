@@ -35,7 +35,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
   history,
 }) => {
   const [menuCurrentHovers, setMenuCurrentHovers] = useState<string[]>([]);
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
   // CLOSE ALL MENU OPENING WHEN CHANGE HISTORY
   useEffect(() => {
     const unlisten = history.listen(() => {
@@ -65,7 +65,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
+        const res = await axios.get("https://apiblognode.onrender.com/api/club");
         const leagueData = Array.isArray(res.data) ? res.data : [];
         setClubData(leagueData);
 
@@ -81,7 +81,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
+        const res = await axios.get("https://apiblognode.onrender.com/api/league");
         const leagueData = Array.isArray(res.data) ? res.data : [];
 
         setLeagueData(leagueData);

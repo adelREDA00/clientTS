@@ -72,7 +72,7 @@ const PageHomeDemo6: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://api-blog-ten.vercel.app/api/${kind}/${id}`);
+        const res = await axios.get(`https://apiblognode.onrender.com/api/${kind}/${id}`);
         setTypeData(res.data);
       } catch (err) {
         console.log(err);
@@ -84,7 +84,7 @@ const PageHomeDemo6: React.FC = () => {
  
 
 
-  const { data1, loading1, error1, reFetch } = useFetch(`https://api-blog-ten.vercel.app/api/posts/?${kind}=${id}`)
+  const { data1, loading1, error1, reFetch } = useFetch(`https://apiblognode.onrender.com/api/posts/?${kind}=${id}`)
 
 
   const [fixtures, setFixtures] = useState([]);
@@ -98,7 +98,7 @@ console.log(data1);
       const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ'
 
       try {
-        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/standings?api_token=${API}&include=participant`);
+        const response = await axios.get(`https://apiblognode.onrender.com/api/football/standings?api_token=${API}&include=participant`);
 
 
 
@@ -125,7 +125,7 @@ console.log(data1);
       const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ'
 
       try {
-        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/livescores/inplay?api_token=${API}&include=lineups`);
+        const response = await axios.get(`https://apiblognode.onrender.com/api/football/livescores/inplay?api_token=${API}&include=lineups`);
         const postsData = Array.isArray(response) ? response : [];
 
         setMatches(postsData);
@@ -149,11 +149,11 @@ console.log(data1);
       const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ';
 
       try {
-        const seasonResponse = await axios.get(`https://api-blog-ten.vercel.app/api/football/leagues/${Typedata.id}?api_token=${API}&include=currentseason`);
+        const seasonResponse = await axios.get(`https://apiblognode.onrender.com/api/football/leagues/${Typedata.id}?api_token=${API}&include=currentseason`);
         const seasonId = seasonResponse.data.data.currentseason.id;
         setCurrentSeason(seasonId);
 
-        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/schedules/seasons/${seasonId}?api_token=${API}`);
+        const response = await axios.get(`https://apiblognode.onrender.com/api/football/schedules/seasons/${seasonId}?api_token=${API}`);
         const responseData = response.data.data[0];
         setSchdual(responseData);
       } catch (error) {
@@ -194,7 +194,7 @@ console.log(data1);
 
       try {
         const response = await axios.get(
-          `https://api-blog-ten.vercel.app/api/football/fixtures/${Fixid}?api_token=${API}&include=participants;scores;lineups;&formations`
+          `https://apiblognode.onrender.com/api/football/fixtures/${Fixid}?api_token=${API}&include=participants;scores;lineups;&formations`
         );
 
         setSingleMatch(response.data.data);

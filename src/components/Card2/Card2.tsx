@@ -33,7 +33,7 @@ const Card2: FC<Card2Props> = ({
     photo
   } = postdataFirst;
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
 
      // Check if `postdata` is defined and has the `categories` property
      if (!postdataFirst) {

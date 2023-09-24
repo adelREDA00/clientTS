@@ -48,7 +48,7 @@ const PageSingleTemp4Sidebar: FC<PageSingleTemp4SidebarProps> = ({
 
   //data single post
   const { id } = useParams();
-  const { data1,loading1, error1, reFetch } = useFetch(`https://api-blog-ten.vercel.app/api/posts/${id}`)
+  const { data1,loading1, error1, reFetch } = useFetch(`https://apiblognode.onrender.com/api/posts/${id}`)
 
  
 

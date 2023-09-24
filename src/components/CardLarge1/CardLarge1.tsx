@@ -30,7 +30,7 @@ const CardLarge1: FC<CardLarge1Props> = ({
 }) => {
 
 
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
   
   
 

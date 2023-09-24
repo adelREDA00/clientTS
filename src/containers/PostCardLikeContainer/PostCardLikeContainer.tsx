@@ -46,7 +46,7 @@ const PostCardLikeContainer: FC<PostCardLikeContainerProps> = ({
     }
 
     try {
-      const res = await axios.put(`https://api-blog-ten.vercel.app/api/posts/${postId}/like`, {
+      const res = await axios.put(`https://apiblognode.onrender.com/api/posts/${postId}/like`, {
         userId: user._id,
       }, {
         headers: {

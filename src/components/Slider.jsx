@@ -17,7 +17,7 @@ function Slider({ids}) {
     const fetchData = async () => {
       const API = "RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ";
       try {
-        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/squads/teams/${ids[team].id}?api_token=${API}&include=player`);
+        const response = await axios.get(`https://apiblognode.onrender.com/api/football/squads/teams/${ids[team].id}?api_token=${API}&include=player`);
         const postsData = Array.isArray(response.data.data) ? response.data.data : [];
 
         setPlayers(postsData);

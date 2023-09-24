@@ -39,7 +39,7 @@ const BookmarkContainer: React.FC<BookmarkContainerProps> = (props) => {
           },
         };
 
-        const res = await axios.get(`https://api-blog-ten.vercel.app/api/users/${user._id}`, config);
+        const res = await axios.get(`https://apiblognode.onrender.com/api/users/${user._id}`, config);
         // Handle success or any additional logic
         if (isMounted.current) {
           const postsData = Array.isArray(res.data) ? res.data : [];
@@ -75,7 +75,7 @@ const BookmarkContainer: React.FC<BookmarkContainerProps> = (props) => {
     try {
       // Make a request to the update user endpoint
       const res = await axios.put(
-        `https://api-blog-ten.vercel.app/api/users/${user._id}`,
+        `https://apiblognode.onrender.com/api/users/${user._id}`,
         {
           postBookMarkIds: postId ,
         },

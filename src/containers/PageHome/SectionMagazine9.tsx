@@ -39,7 +39,7 @@ const SectionMagazine9: FC<SectionMagazine9Props> = ({
       const fetchData = async () => {
         try {
           if (leagues) {
-            const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?league=${leagues[0]._id}`);
+            const res = await axios.get(`https://apiblognode.onrender.com/api/posts/?league=${leagues[0]._id}`);
             const postsData = Array.isArray(res.data) ? res.data : [];
 
             setRecData(postsData);
@@ -61,7 +61,7 @@ const SectionMagazine9: FC<SectionMagazine9Props> = ({
       const fetchData = async () => {
         try {
           if (clubs) {
-            const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?club=${clubs[0]._id}`);
+            const res = await axios.get(`https://apiblognode.onrender.com/api/posts/?club=${clubs[0]._id}`);
             const postsData = Array.isArray(res.data) ? res.data : [];
 
             setRecClub(postsData);
@@ -80,7 +80,7 @@ const SectionMagazine9: FC<SectionMagazine9Props> = ({
       const fetchData = async () => {
         try {
           if (countries) {
-            const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?country=${countries[0]._id}`);
+            const res = await axios.get(`https://apiblognode.onrender.com/api/posts/?country=${countries[0]._id}`);
             const postsData = Array.isArray(res.data) ? res.data : [];
 
             setRecCountry(postsData);

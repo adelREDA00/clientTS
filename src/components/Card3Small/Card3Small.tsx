@@ -12,7 +12,7 @@ export interface Card3SmallProps {
 
 const Card3Small: FC<Card3SmallProps> = ({ className = "h-full", post }) => {
   const { title, href, photo,_id } = post;
-  const PF = "https://api-blog-ten.vercel.app/images/";
+  const PF = "https://apiblognode.onrender.com/images/";
  
   
 

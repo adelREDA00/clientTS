@@ -50,7 +50,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/posts");
+        const res = await axios.get("https://apiblognode.onrender.com/api/posts");
 
         // Verify that res.data is an array before setting state
         const postsData = Array.isArray(res.data) ? res.data : [];
@@ -70,7 +70,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
+        const res = await axios.get("https://apiblognode.onrender.com/api/categories");
 
         // Verify that res.data is an array before setting state
         const categoriesData = Array.isArray(res.data) ? res.data : [];
@@ -88,7 +88,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
+        const res = await axios.get("https://apiblognode.onrender.com/api/league");
 
         // Verify that res.data is an array before setting state
         const leagueData = Array.isArray(res.data) ? res.data : [];
@@ -106,7 +106,7 @@ const PageHome: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
+        const res = await axios.get("https://apiblognode.onrender.com/api/club");
 
         // Verify that res.data is an array before setting state
         const clubData = Array.isArray(res.data) ? res.data : [];

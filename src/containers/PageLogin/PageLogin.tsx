@@ -69,7 +69,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://api-blog-ten.vercel.app/api/auth/connexion", {
+      const res = await axios.post("https://apiblognode.onrender.com/api/auth/connexion", {
         username,
         password,
       }, {

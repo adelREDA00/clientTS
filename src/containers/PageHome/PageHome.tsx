@@ -167,7 +167,7 @@ const PageHome: React.FC = () => {
 
 
 
-  //const reversedData = data.slice().reverse();
+  const reversedData = data.slice().reverse();
 
 
 

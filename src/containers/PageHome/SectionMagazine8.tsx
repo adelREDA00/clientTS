@@ -34,9 +34,11 @@ const SectionMagazine8: FC<SectionMagazine8Props> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/club/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/club/');
         const data = await response.json();
-        setClubs(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setClubs(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -48,9 +50,11 @@ const SectionMagazine8: FC<SectionMagazine8Props> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/league/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/league/');
         const data = await response.json();
-        setLeague(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setLeague(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -62,9 +66,11 @@ const SectionMagazine8: FC<SectionMagazine8Props> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/country/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/country/');
         const data = await response.json();
-        setCountry(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setCountry(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -104,7 +110,7 @@ const SectionMagazine8: FC<SectionMagazine8Props> = ({
         clubs: [favoriteClub],
       };
 
-      await axios.put(`/api/users/${user._id}`, postData, config);
+      await axios.put(`https://api-blog-ten.vercel.app/api/users/${user._id}`, postData, config);
       console.log('User updated successfully!');
     } catch (error) {
       console.error(error);

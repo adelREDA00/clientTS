@@ -15,10 +15,12 @@ function Slider({ids}) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const API = "jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX";
+      const API = "RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ";
       try {
-        const response = await axios.get(`/api/football/squads/teams/${ids[team].id}?api_token=${API}&include=player`);
-        setPlayers(response.data.data);
+        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/squads/teams/${ids[team].id}?api_token=${API}&include=player`);
+        const postsData = Array.isArray(response.data.data) ? response.data.data : [];
+
+        setPlayers(postsData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

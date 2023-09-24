@@ -72,7 +72,7 @@ const PageHomeDemo6: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/api/${kind}/${id}`);
+        const res = await axios.get(`https://api-blog-ten.vercel.app/api/${kind}/${id}`);
         setTypeData(res.data);
       } catch (err) {
         console.log(err);
@@ -84,7 +84,7 @@ const PageHomeDemo6: React.FC = () => {
  
 
 
-  const { data1, loading1, error1, reFetch } = useFetch(`/api/posts/?${kind}=${id}`)
+  const { data1, loading1, error1, reFetch } = useFetch(`https://api-blog-ten.vercel.app/api/posts/?${kind}=${id}`)
 
 
   const [fixtures, setFixtures] = useState([]);
@@ -95,17 +95,19 @@ console.log(data1);
   useEffect(() => {
     const fetchData = async () => {
 
-      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX'
+      const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ'
 
       try {
-        const response = await axios.get(`/api/football/standings?api_token=${API}&include=participant`);
+        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/standings?api_token=${API}&include=participant`);
 
 
 
         //need to ber a var 
         const filteredFixtures = response.data.data.filter((data) => data.league_id === Typedata.id);
         const sortedFixtures = filteredFixtures.sort((a, b) => a.position - b.position);
-        setFixtures(sortedFixtures);
+        const postsData = Array.isArray(sortedFixtures) ? sortedFixtures : [];
+
+        setFixtures(postsData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -120,12 +122,13 @@ console.log(data1);
   useEffect(() => {
     const fetchData = async () => {
 
-      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX'
+      const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ'
 
       try {
-        const response = await axios.get(`/api/football/livescores/inplay?api_token=${API}&include=lineups`);
+        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/livescores/inplay?api_token=${API}&include=lineups`);
+        const postsData = Array.isArray(response) ? response : [];
 
-        setMatches(response);
+        setMatches(postsData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -143,14 +146,14 @@ console.log(data1);
 
   useEffect(() => {
     const fetchData = async () => {
-      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX';
+      const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ';
 
       try {
-        const seasonResponse = await axios.get(`/api/football/leagues/${Typedata.id}?api_token=${API}&include=currentseason`);
+        const seasonResponse = await axios.get(`https://api-blog-ten.vercel.app/api/football/leagues/${Typedata.id}?api_token=${API}&include=currentseason`);
         const seasonId = seasonResponse.data.data.currentseason.id;
         setCurrentSeason(seasonId);
 
-        const response = await axios.get(`/api/football/schedules/seasons/${seasonId}?api_token=${API}`);
+        const response = await axios.get(`https://api-blog-ten.vercel.app/api/football/schedules/seasons/${seasonId}?api_token=${API}`);
         const responseData = response.data.data[0];
         setSchdual(responseData);
       } catch (error) {
@@ -187,11 +190,11 @@ console.log(data1);
 
   useEffect(() => {
     const fetchData = async () => {
-      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX';
+      const API = 'RbKazNyh5hA952DB24RO1ifmMblxF5q24y1Gagt20D6zQ0J3QRqImedN9BbZ';
 
       try {
         const response = await axios.get(
-          `/api/football/fixtures/${Fixid}?api_token=${API}&include=participants;scores;lineups;&formations`
+          `https://api-blog-ten.vercel.app/api/football/fixtures/${Fixid}?api_token=${API}&include=participants;scores;lineups;&formations`
         );
 
         setSingleMatch(response.data.data);

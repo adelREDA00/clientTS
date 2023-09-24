@@ -115,7 +115,7 @@ const PageSignUp: FC<PageSignUpProps> = ({ className = "" }) => {
 
 
     try {
-      const res = await axios.post("/api/auth/register", {
+      const res = await axios.post("https://api-blog-ten.vercel.app/api/auth/register", {
         username,
         email,
         password,

@@ -51,10 +51,10 @@ const PageHome: React.FC = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get("https://api-blog-ten.vercel.app/api/posts");
-        
+
         // Verify that res.data is an array before setting state
         const postsData = Array.isArray(res.data) ? res.data : [];
-  
+
         setData(postsData);
       } catch (err) {
         console.log(err);
@@ -62,62 +62,62 @@ const PageHome: React.FC = () => {
     };
     fetchData();
   }, []);
-  
+
 
 
   const [catdata, setCatData] = useState([]);
-//fetching categories
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
-      
-      // Verify that res.data is an array before setting state
-      const categoriesData = Array.isArray(res.data) ? res.data : [];
+  //fetching categories
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/categories");
 
-      setCatData(categoriesData);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  fetchData();
-}, []);
+        // Verify that res.data is an array before setting state
+        const categoriesData = Array.isArray(res.data) ? res.data : [];
 
-const [leaguedata, setLeagueData] = useState([]);
-//fetching the league
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
-      
-      // Verify that res.data is an array before setting state
-      const leagueData = Array.isArray(res.data) ? res.data : [];
+        setCatData(categoriesData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
 
-      setLeagueData(leagueData);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  fetchData();
-}, []);
+  const [leaguedata, setLeagueData] = useState([]);
+  //fetching the league
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
 
-const [clubdata, setClubData] = useState([]);
-//fetching the club
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
-      
-      // Verify that res.data is an array before setting state
-      const clubData = Array.isArray(res.data) ? res.data : [];
+        // Verify that res.data is an array before setting state
+        const leagueData = Array.isArray(res.data) ? res.data : [];
 
-      setClubData(clubData);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  fetchData();
-}, []);
+        setLeagueData(leagueData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const [clubdata, setClubData] = useState([]);
+  //fetching the club
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/club");
+
+        // Verify that res.data is an array before setting state
+        const clubData = Array.isArray(res.data) ? res.data : [];
+
+        setClubData(clubData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
 
 
   /*const { user, token } = useContext(AuthContext);
@@ -146,33 +146,33 @@ useEffect(() => {
   }, []);
 
 */
- /* useEffect(() => {
-    const fetchData = async () => {
-    
-      const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX' 
-  
-      try {
-        const response = await axios.get(`/api/football/teams?api_token=${API} `);
-      setStandings(response);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-  
-    fetchData();
-  }, []);
-  const [standings, setStandings] = useState([]);
-
-*/
+  /* useEffect(() => {
+     const fetchData = async () => {
+     
+       const API = 'jq2m1ECINqEAsH0B9oaGQQ1nVqkMM4PkqRhR6lCClQi6Hppxd4npdZCk2CXX' 
+   
+       try {
+         const response = await axios.get(`/api/football/teams?api_token=${API} `);
+       setStandings(response);
+       } catch (error) {
+         console.error('Error fetching data:', error);
+       }
+     };
+   
+     fetchData();
+   }, []);
+   const [standings, setStandings] = useState([]);
+ 
+ */
 
 
 
   //const reversedData = data.slice().reverse();
 
-  
 
 
-  return ( 
+
+  return (
     <div className="nc-PageHome relative">
       <Helmet>
         <title>Home || DZ FOOT</title>
@@ -186,13 +186,15 @@ useEffect(() => {
         {/* ======= START CONTAINER ============= */}
         <div className="container relative">
           {/* === large slider
-              <SectionLargeSlider
+        
+            === */}
+
+          <SectionLargeSlider
             className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-24 "
             posts={POSTS.filter((_, i) => i < 3)}
             data={reversedData}
           />
-            === */}
-      
+
 
 
           {/* === SECTION 4 ===
@@ -202,53 +204,53 @@ useEffect(() => {
 
 
 
-{catdata.length > 0 ? (
-  catdata.map((category, index) => {
-    const componentIndex = index % 3;
-    if (componentIndex === 0) {
-      return (
-        <SectionMagazine1
-          key={category._id}
-          className="py-16 lg:py-28"
-          posts={MAGAZINE1_POSTS}
-          tabs={MAGAZINE1_TABS}
-          data={category._id}
-          catname={category.name}
-        />
-      );
-    } else if (componentIndex === 1) {
-      return (
-        <div className="relative py-16" key={category._id}>
-          <BackgroundSection />
-          <SectionSliderPosts
-            postCardName="card11"
-            data={category._id}
-            heading={`${category.name} Articles`}
-            subHeading="Discover the most outstanding articles in all topics of life."
-            posts={DEMO_POSTS.filter(
-              (p, i) => i > 3 && i < 25 && p.postType === "standard"
-            )}
-            sliderStype="style2"
-            uniqueSliderClass="pageHome-section12"
-          />
-        </div>
-      );
-    } else {
-      return (
-        <SectionMagazine4
-          key={category._id}
-          data={category._id}
-          className="py-16 lg:py-28"
-          heading={category.name}
-          posts={MAGAZINE2_POSTS}
-          tabs={MAGAZINE1_TABS}
-        />
-      );
-    }
-  })
-) : (
-  <p>Loading...</p>
-)}
+          {catdata.length > 0 ? (
+            catdata.map((category, index) => {
+              const componentIndex = index % 3;
+              if (componentIndex === 0) {
+                return (
+                  <SectionMagazine1
+                    key={category._id}
+                    className="py-16 lg:py-28"
+                    posts={MAGAZINE1_POSTS}
+                    tabs={MAGAZINE1_TABS}
+                    data={category._id}
+                    catname={category.name}
+                  />
+                );
+              } else if (componentIndex === 1) {
+                return (
+                  <div className="relative py-16" key={category._id}>
+                    <BackgroundSection />
+                    <SectionSliderPosts
+                      postCardName="card11"
+                      data={category._id}
+                      heading={`${category.name} Articles`}
+                      subHeading="Discover the most outstanding articles in all topics of life."
+                      posts={DEMO_POSTS.filter(
+                        (p, i) => i > 3 && i < 25 && p.postType === "standard"
+                      )}
+                      sliderStype="style2"
+                      uniqueSliderClass="pageHome-section12"
+                    />
+                  </div>
+                );
+              } else {
+                return (
+                  <SectionMagazine4
+                    key={category._id}
+                    data={category._id}
+                    className="py-16 lg:py-28"
+                    heading={category.name}
+                    posts={MAGAZINE2_POSTS}
+                    tabs={MAGAZINE1_TABS}
+                  />
+                );
+              }
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
 
 
 
@@ -302,7 +304,7 @@ useEffect(() => {
           />
           === */}
 
-     
+
 
           {/* === 
         recomndation 5 
@@ -315,27 +317,27 @@ useEffect(() => {
           />
           === */}
 
-       
 
-          <br/>
-      
 
+          <br />
 
 
 
 
- 
 
 
-   <br/>
-          <br/>
-          <br/>
-     
-          
- 
 
 
-     
+
+          <br />
+          <br />
+          <br />
+
+
+
+
+
+
 
 
           {/* === SECTION 7 ===
@@ -423,14 +425,14 @@ useEffect(() => {
         </div>
         {/* ======= END CONTAINER ============= */}
         <div id="plr" className="pltpart">
-        <h1 className="plt">⚽ Joueurs</h1>
-        <small>✨ Explorez les articles liés à votre joueur favori.</small>
+          <h1 className="plt">⚽ Joueurs</h1>
+          <small>✨ Explorez les articles liés à votre joueur favori.</small>
 
         </div>
-            {/* ======= END CONTAINER <div className="homeSlide">
+        {/* ======= END CONTAINER <div className="homeSlide">
           <HomeSlider/>
           </div>============= */}
-        
+
       </div>
     </div>
   );

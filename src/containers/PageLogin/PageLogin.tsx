@@ -69,7 +69,7 @@ const PageLogin: FC<PageLoginProps> = ({ className = "" }) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/api/auth/connexion", {
+      const res = await axios.post("https://api-blog-ten.vercel.app/api/auth/connexion", {
         username,
         password,
       }, {

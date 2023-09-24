@@ -28,7 +28,7 @@ const WidgetPosts: FC<WidgetPostsProps> = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = "/api/posts";
+      let url = "https://api-blog-ten.vercel.app/api/posts";
       let queryParams = [];
 
       if (league) {

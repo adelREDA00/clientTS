@@ -24,7 +24,7 @@ const SingleHeader4: FC<SingleHeader4Props> = ({
   metaActionStyle = "style1",
 }) => {
   const { categories, desc, title } = pageData;
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
   if (!postdata) {
     return <div>Loading...</div>; // or any loading indicator

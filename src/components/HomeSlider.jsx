@@ -15,14 +15,16 @@ function HomeSlider({ids}) {
 
  
 
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/player`);
-        setPlayers(response.data);
+        const response = await axios.get(`https://api-blog-ten.vercel.app/api/player`);
+        const postsData = Array.isArray(response.data) ? response.data : [];
+
+        setPlayers(postsData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

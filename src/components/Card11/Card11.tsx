@@ -22,7 +22,7 @@ const Card11: FC<Card11Props> = ({
   ratio = "aspect-w-4 aspect-h-3",
 }) => {
   const { title,_id, href, categories, createdAt,photo,likes, comments} = post;
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
 
   const [isHover, setIsHover] = useState(false);

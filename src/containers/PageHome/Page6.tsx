@@ -74,8 +74,10 @@ const [postdata, setPostData] = useState([]);
 useEffect(() => {
   const fetchData = async () => {
     try {
-      const res = await axios.get(`/api/posts/?cat=${id}`);
-      setPostData(res.data);
+      const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?cat=${id}`);
+      const postsData = Array.isArray(res.data) ? res.data : [];
+
+      setPostData(postsData);
     } catch (err) {
       console.log(err);
     }

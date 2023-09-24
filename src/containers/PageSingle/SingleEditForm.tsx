@@ -39,7 +39,7 @@ const SingleEditForm: FC<SingleEditFormProps> = ({
     
     try {
 
-      const res = await axios.put("/api/comments", {
+      const res = await axios.put("https://api-blog-ten.vercel.app/api/comments", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

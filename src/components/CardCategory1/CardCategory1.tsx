@@ -19,7 +19,7 @@ const CardCategory1: FC<CardCategory1Props> = ({
 }) => {
   const {  name, _id,id ,image_path
   } = taxonomy;
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
   let imgSrc;
     if(id===0){

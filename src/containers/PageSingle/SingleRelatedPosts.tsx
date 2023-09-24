@@ -34,7 +34,7 @@ const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = "/api/posts";
+      let url = "https://api-blog-ten.vercel.app/api/posts";
       let queryParams = [];
 
       if (categories && categories.length > 0) {
@@ -48,7 +48,9 @@ const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 
       try {
         const res = await axios.get(url);
-        setRelatedPosts1(res.data);
+        const postsData = Array.isArray(res.data) ? res.data : [];
+
+        setRelatedPosts1(postsData);
       } catch (err) {
         console.log(err);
       }

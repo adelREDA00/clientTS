@@ -25,7 +25,7 @@ const Card9: FC<Card9Props> = ({
   const { title, categories, likes,user,_id,desc,createdAt,comments, postType,photo } =
     post;
 
-    const PF = "https://blogapi-vbdw.onrender.com/images/";
+    const PF = "https://api-blog-ten.vercel.app/images/";
 
 
     

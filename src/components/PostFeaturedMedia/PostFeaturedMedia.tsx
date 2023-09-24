@@ -25,7 +25,7 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
   const { featuredImage,photo, postType, videoUrl, galleryImgs, audioUrl, id } = post;
 
   const videoRef = useRef(null);
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
 
   let IS_MOBILE = false;

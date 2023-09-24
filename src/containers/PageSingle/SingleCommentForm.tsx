@@ -44,7 +44,7 @@ const SingleCommentForm: FC<SingleCommentFormProps> = ({
 
       try {
             // Send a POST request to create a new comment
-      const response = await axios.post(`/api/comments/${postId}/comments`, {
+      const response = await axios.post(`https://api-blog-ten.vercel.app/api/comments/${postId}/comments`, {
         content,
         userId:user._id,
       },config);

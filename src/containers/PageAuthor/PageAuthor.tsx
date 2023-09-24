@@ -78,9 +78,11 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
   useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('/api/club/');
+          const response = await fetch('https://api-blog-ten.vercel.app/api/club/');
           const data = await response.json();
-          setClubs(data);
+          const postsData = Array.isArray(data) ? data : [];
+
+          setClubs(postsData);
         } catch (error) {
           console.log(error);
         }
@@ -92,9 +94,11 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('/api/league/');
+          const response = await fetch('https://api-blog-ten.vercel.app/api/league/');
           const data = await response.json();
-          setLeague(data);
+          const postsData = Array.isArray(data) ? data : [];
+
+          setLeague(postsData);
         } catch (error) {
           console.log(error);
         }
@@ -106,9 +110,11 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('/api/country/');
+          const response = await fetch('https://api-blog-ten.vercel.app/api/country/');
           const data = await response.json();
-          setCountry(data);
+          const postsData = Array.isArray(data) ? data : [];
+
+          setCountry(postsData);
         } catch (error) {
           console.log(error);
         }
@@ -127,7 +133,7 @@ const PageAuthor: FC<PageAuthorProps> = ({ className = "" }) => {
           },
         };
   
-        const res = await axios.get(`/api/users/${user._id}`, config);
+        const res = await axios.get(`https://api-blog-ten.vercel.app/api/users/${user._id}`, config);
         // Handle success or any additional logic
         setData(res.data)
       } catch (error) {
@@ -158,9 +164,11 @@ const {countries , clubs , leagues} = data
           Authorization: `Bearer ${token}`,
         },
       };
-      const response = await axios.get(`/api/users/${userId}/posts`,config);
+      const response = await axios.get(`https://api-blog-ten.vercel.app/api/users/${userId}/posts`,config);
       const fetchedPosts = response.data;
-      setBookmarkedPosts(fetchedPosts);
+      const postsData = Array.isArray(fetchedPosts) ? fetchedPosts : [];
+
+      setBookmarkedPosts(postsData);
     } catch (error) {
       console.log("Error fetching bookmarked posts:", error);
     }
@@ -217,7 +225,7 @@ const {countries , clubs , leagues} = data
           [addpostName]: id._id,
         };
   
-        await axios.put(`/api/users/${user._id}`, postData, config);
+        await axios.put(`https://api-blog-ten.vercel.app/api/users/${user._id}`, postData, config);
         console.log('User updated successfully!');
      
       

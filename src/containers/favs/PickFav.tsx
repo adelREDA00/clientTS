@@ -28,9 +28,11 @@ function PickFav() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/club/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/club/');
         const data = await response.json();
-        setClubs(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setClubs(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -42,9 +44,11 @@ function PickFav() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/league/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/league/');
         const data = await response.json();
-        setLeague(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setLeague(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -56,9 +60,11 @@ function PickFav() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/country/');
+        const response = await fetch('https://api-blog-ten.vercel.app/api/country/');
         const data = await response.json();
-        setCountry(data);
+        const postsData = Array.isArray(data) ? data : [];
+
+        setCountry(postsData);
       } catch (error) {
         console.log(error);
       }
@@ -84,7 +90,7 @@ function PickFav() {
         clubIds: favoriteClub,
       };
 
-      await axios.put(`/api/users/${user._id}`, postData, config);
+      await axios.put(`https://api-blog-ten.vercel.app/api/users/${user._id}`, postData, config);
      
     } catch (error) {
       console.error(error);
@@ -130,7 +136,7 @@ function PickFav() {
     }
   }, [favoriteClub]);
 
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
   
 
   return (

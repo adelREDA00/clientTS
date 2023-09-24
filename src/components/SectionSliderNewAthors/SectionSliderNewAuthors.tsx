@@ -71,8 +71,10 @@ const SectionSliderNewAuthors: FC<SectionSliderNewAuthorsProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/api/league");
-        setData(res.data);
+        const res = await axios.get("https://api-blog-ten.vercel.app/api/league");
+        const postsData = Array.isArrayres(res.data) ? res.data : [];
+
+        setData(postsData);
       } catch (err) {
         console.log(err);
       }

@@ -20,7 +20,7 @@ const Card6: FC<Card6Props> = ({ className = "h-full", postdataFirst,index }) =>
 
   let post = {}
 
-  const PF = "https://blogapi-vbdw.onrender.com/images/";
+  const PF = "https://api-blog-ten.vercel.app/images/";
 
  
   

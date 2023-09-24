@@ -39,10 +39,11 @@ const BookmarkContainer: React.FC<BookmarkContainerProps> = (props) => {
           },
         };
 
-        const res = await axios.get(`/api/users/${user._id}`, config);
+        const res = await axios.get(`https://api-blog-ten.vercel.app/api/users/${user._id}`, config);
         // Handle success or any additional logic
         if (isMounted.current) {
-          setData(res.data);
+          const postsData = Array.isArray(res.data) ? res.data : [];
+          setData(postsData);
         }
       } catch (error) {
         // Handle error
@@ -74,7 +75,7 @@ const BookmarkContainer: React.FC<BookmarkContainerProps> = (props) => {
     try {
       // Make a request to the update user endpoint
       const res = await axios.put(
-        `/api/users/${user._id}`,
+        `https://api-blog-ten.vercel.app/api/users/${user._id}`,
         {
           postBookMarkIds: postId ,
         },

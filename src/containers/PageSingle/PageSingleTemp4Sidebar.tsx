@@ -48,12 +48,13 @@ const PageSingleTemp4Sidebar: FC<PageSingleTemp4SidebarProps> = ({
 
   //data single post
   const { id } = useParams();
-  const { data1,loading1, error1, reFetch } = useFetch(`/api/posts/${id}`)
+  const { data1,loading1, error1, reFetch } = useFetch(`https://api-blog-ten.vercel.app/api/posts/${id}`)
 
  
 
+  const USERLIST = Array.isArray(data1) ? data1 : [];
 
-  const { country, club, league, categories,tags } = data1;
+  const { country, club, league, categories,tags } = USERLIST;
   const extractedData = { country, club, league, categories,tags };
 
 

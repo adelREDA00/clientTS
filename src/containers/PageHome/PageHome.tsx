@@ -185,7 +185,7 @@ useEffect(() => {
 
         {/* ======= START CONTAINER ============= */}
         <div className="container relative">
-          {/* === SECTION
+          {/* === large slider
               <SectionLargeSlider
             className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-24 "
             posts={POSTS.filter((_, i) => i < 3)}

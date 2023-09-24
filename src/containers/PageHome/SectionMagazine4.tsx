@@ -34,8 +34,9 @@ const SectionMagazine4: FC<SectionMagazine4Props> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/api/posts/?cat=${data}`);
-        setPostData(res.data);
+        const res = await axios.get(`https://api-blog-ten.vercel.app/api/posts/?cat=${data}`);
+        const postsData = Array.isArray(res.data) ? res.data : [];
+        setPostData(postsData);
       } catch (err) {
         console.log(err);
       }

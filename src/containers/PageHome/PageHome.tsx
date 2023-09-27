@@ -30,7 +30,7 @@ import SectionMagazine9 from "./SectionMagazine9";
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
 import Heading from "../../components/Heading/Heading";
 
-//import HomeSlider from "components/HomeSlider";
+import HomeSlider from "components/HomeSlider";
 import axios from 'axios';
 import { AuthContext } from "../../context/auth";
 
@@ -430,8 +430,8 @@ const PageHome: React.FC = () => {
 
         </div>
         {/* ======= END CONTAINER <div className="homeSlide">
-          <HomeSlider/>
           </div>============= */}
+          <HomeSlider/>
 
       </div>
     </div>

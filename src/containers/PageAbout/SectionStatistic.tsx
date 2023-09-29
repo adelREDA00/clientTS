@@ -31,7 +31,7 @@ const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
             Créé avec passion par Toumi Reda
             </h3>
             <span className="block text-sm text-neutral-500 mt-3 sm:text-base dark:text-neutral-400">
-           <a href="https://toumi.tech/">PORTFOLIO</a>
+           <a className="portlink" href="https://toumi.tech/">PORTFOLIO</a>
             </span>
           </div>
     

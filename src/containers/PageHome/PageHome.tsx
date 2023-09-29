@@ -249,7 +249,7 @@ const PageHome: React.FC = () => {
               }
             })
           ) : (
-            <p>Loading...</p>
+            <p>Chargement... 🐌 Notre serveur gratuit se réveille lentement, comme un lundi matin. Mais ne vous inquiétez pas, il finira par se mettre en marche ! ⏳</p>
           )}
 
 

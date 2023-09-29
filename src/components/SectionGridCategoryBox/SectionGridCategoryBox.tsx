@@ -68,7 +68,7 @@ const SectionGridCategoryBox: React.FC<SectionGridCategoryBoxProps> = ({
       ))}
     </div>
   ) : (
-    <div>Loading...</div>
+    <div>Chargement... 🐌  </div>
   )}
     </div>
   );

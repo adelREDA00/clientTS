@@ -17,7 +17,7 @@ const CategoryBadgeList: FC<CategoryBadgeListProps> = ({
 
    // Check if `postdata` is defined and has the `categories` property
    if (!postdataCategory ) {
-    return <div>Loading...</div>; // or any loading indicator
+    return <div>Chargement... 🐌 ⏳</div>; // or any loading indicator
   }
 
   // Access the `categories` property

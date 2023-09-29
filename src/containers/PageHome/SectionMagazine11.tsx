@@ -108,7 +108,7 @@ const SectionMagazine11: FC<SectionMagazine11Props> = ({
         </div>
       ))
     ) : (
-      <div>Loading...</div>
+      <div>Chargement... 🐌 ⏳</div>
     )}
       </div>
     </div>

@@ -37,7 +37,7 @@ const Card2: FC<Card2Props> = ({
 
      // Check if `postdata` is defined and has the `categories` property
      if (!postdataFirst) {
-      return <div>Loading...</div>; // or any loading indicator
+      return <div>Chargement...🐌! ⏳</div>; // or any loading indicator
     }
 
 

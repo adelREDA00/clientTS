@@ -70,7 +70,7 @@ function Slider({ids}) {
               </SwiperSlide>
             ))
           ) : (
-            <div>Loading...</div>
+            <div>Chargement... 🐌 ⏳</div>
           )}
         </Swiper>
 

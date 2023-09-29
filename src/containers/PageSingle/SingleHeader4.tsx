@@ -27,7 +27,7 @@ const SingleHeader4: FC<SingleHeader4Props> = ({
   const PF = "https://apiblognode.onrender.com/images/";
 
   if (!postdata) {
-    return <div>Loading...</div>; // or any loading indicator
+    return <div>Chargement... 🐌 ⏳</div>; // or any loading indicator
   }
 
   const {_id,likes,user,createdAt,comments} = postdata

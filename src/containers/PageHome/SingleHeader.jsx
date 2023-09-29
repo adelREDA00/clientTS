@@ -37,7 +37,7 @@ const SingleHeader = ({ name, Typedata, handleDisplay, trackTitle, type }) => {
 
 
   if (!Typedata) {
-    return <div>Loading...</div>; // Or any loading indicator or placeholder
+    return <div>Chargement... 🐌 ⏳</div>; // Or any loading indicator or placeholder
   }
 
   const HeadTitle = headData.map((title, index) => {

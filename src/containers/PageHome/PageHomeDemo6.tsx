@@ -9,7 +9,6 @@ import SectionMagazine2 from "./SectionMagazine2";
 import SectionMagazine10 from "./SectionMagazine10";
 import SectionMagazine9 from "./SectionMagazine9";
 import SectionMagazine11 from "./SectionMagazine11";
-import SoccerField from "./SoccerPitch";
 import { useFetch } from "../../hooks/useFetch";
 import { useParams } from 'react-router-dom';
 import SingleHeader from "./SingleHeader";
@@ -467,7 +466,8 @@ console.log(data1);
          
               <br />
               <br />
-              <SoccerField />
+             <small>Cliquez sur le match spécifique pour obtenir le résultat du match
+                                                                    </small>
             </div>
             {SingleMatch && SingleMatch.participants && (
             <Slider ids={SingleMatch.participants} />

@@ -12,10 +12,9 @@ const socialsDemo: SocialType[] = [
     id: "Facebook",
     name: "Facebook",
     icon: "lab la-facebook-square",
-    href: "#",
+    href: "https://www.facebook.com/people/Ad-El/pfbid02VM4LQkgZ8Kts1v3ATfMAZeW3b2NQAjCutcKefnkkBU181hDLtrjLfe3qpDuPp4sal/",
   },
-  { id: "Twitter", name: "Twitter", icon: "lab la-twitter", href: "#" },
-  { id: "Instagram", name: "Instagram", icon: "lab la-instagram", href: "#" },
+  { id: "Instagram", name: "Instagram", icon: "lab la-instagram", href: "https://www.instagram.com/toumi_adell/?igshid=ZDdkNTZiNTM%3D" },
 ];
 
 export const SOCIALS_2 = socialsDemo;
